@@ -13,11 +13,13 @@ import Contact from "./sections/Contact/Contact";
 import Cta from "./sections/CTA/Cta";
 
 // components
+import Header from "./layout/Header/Header";
 
 export default function App() {
   Aos.init({ duration: 1000, once: true });
   return (
     <main>
+      <Header />
       <Hero />
 
       {/* Seções em que ainda não foi iniciado o desenvolvimento */}
