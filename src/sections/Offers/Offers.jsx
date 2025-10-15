@@ -1,10 +1,22 @@
 import "./Offers.css";
+import { offers } from "./OffersList";
+import Button from "../../components/Button/Button";
 
 export default function Offers() {
   return (
     <section
+      // id = serviços | produtos
       id=""
       className="offers min-h-screen flex items-center justify-center py-20"
-    ></section>
+    >
+      <div>
+        <ul>
+          {offers.map((item) => (
+            <li>{item.title}</li>
+          ))}
+        </ul>
+      </div>
+      <Button />
+    </section>
   );
 }

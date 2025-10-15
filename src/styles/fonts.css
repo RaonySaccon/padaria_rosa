@@ -1,0 +1,8 @@
+@font-face {
+  font-family: font_name;
+  src: url();
+}
+
+.font_name {
+  font-family: font_name;
+}
