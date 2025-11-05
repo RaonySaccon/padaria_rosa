@@ -27,15 +27,15 @@ export default function App() {
       <ZapButton />
 
       {/* sections */}
-      <Depoiments />
-      <Faq />
+      <Hero />
+      <About />
+      <Offers />
       <Footer />
 
       {/* Seções em que ainda não foi iniciado o desenvolvimento */}
       <NoVisible>
-        <Hero />
-        <About />
-        <Offers />
+        <Depoiments />
+        <Faq />
         <Differentials />
         <Contact />
         <Cta />

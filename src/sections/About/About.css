@@ -1,5 +1,10 @@
 .about {
-  background-image: url('');
+  background-image: url("");
   background-position: center;
   background-size: cover;
+  background: linear-gradient(
+    to bottom,
+    #fbcfe8 50%,
+    oklch(98.7% 0.022 95.277) 50%
+  );
 }

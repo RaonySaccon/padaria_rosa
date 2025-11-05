@@ -14,7 +14,7 @@ export default function Header() {
       <AnimatePresence>
         {asideView && <Aside toggleAside={toggleAside} />}
       </AnimatePresence>
-      <header className="fixed w-full items-center flex justify-between sm:justify-around px-8 py-3 shadow bg-white z-50">
+      <header className="fixed w-full items-center flex justify-between sm:justify-around px-8 py-3 shadow bg-pink-500 text-white z-50">
         <p>logo</p>
         <BiMenu className="text-3xl sm:hidden" onClick={toggleAside} />
         <nav className="hidden sm:block">
