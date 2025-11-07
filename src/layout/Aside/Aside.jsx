@@ -25,22 +25,26 @@ export default function Aside({ toggleAside }) {
         animate={{ translateX: "0%" }}
         exit={{ translateX: "-100%" }}
         transition={{ ease: "easeInOut" }}
-        className="fixed h-screen left-0 top-0 bg-white px-6 z-100 drop-shadow-xl"
+        className="fixed h-screen left-0 top-0 bg-pink-400 text-white px-6 z-100 drop-shadow-xl"
       >
         <header className="w-full flex justify-between items-center py-4 mb-6 border-b-1 border-black/40">
-          <p>logo</p>
+          <img
+            src="/imgs/icons/logo.png"
+            alt="Logo da Padaria"
+            className="w-14 -my-2.5"
+          />
           <Close />
         </header>
         <nav>
           <ul className="flex flex-col gap-6">
             {navItems.map((item) => (
-              <li>
+              <li className="border-b-2 w-10/12 border-white/50">
                 <a href={item.link} target="_self" className="pr-14">
                   {item.title}
                 </a>
               </li>
             ))}
-            <Button text="Whatsapp" />
+            <Button text="Whatsapp" className="bg-pink-500" />
           </ul>
         </nav>
       </motion.div>

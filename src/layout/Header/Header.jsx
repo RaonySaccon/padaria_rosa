@@ -15,7 +15,11 @@ export default function Header() {
         {asideView && <Aside toggleAside={toggleAside} />}
       </AnimatePresence>
       <header className="fixed w-full items-center flex justify-between sm:justify-around px-8 py-3 shadow bg-pink-500 text-white z-50">
-        <p>logo</p>
+        <img
+          src="/imgs/icons/logo.png"
+          alt="Logo da Padaria"
+          className="w-14 -my-2.5"
+        />
         <BiMenu className="text-3xl sm:hidden" onClick={toggleAside} />
         <nav className="hidden sm:block">
           <ul className="flex gap-5 md:gap-8 lg:gap-12 xl:gap-16">

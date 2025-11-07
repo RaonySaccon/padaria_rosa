@@ -8,19 +8,15 @@ export const navItems = [
     link: "#sobre",
   },
   {
-    title: "Serviços",
-    link: "#serviços",
+    title: "Delícias",
+    link: "#delicias",
   },
   {
     title: "Depoimentos",
     link: "#depoimentos",
   },
   {
-    title: "FAQ",
-    link: "#faq",
-  },
-  {
-    title: "Contato",
-    link: "#contato",
+    title: "Cardápio",
+    link: "#cardapio",
   },
 ];

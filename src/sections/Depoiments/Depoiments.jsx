@@ -1,12 +1,11 @@
 import "./Depoiments.css";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { useEffect, useRef } from "react";
 import Button from "../../components/Button/Button";
 import { depoiments } from "./DepoimentsList";
 
 export default function Depoiments() {
-  const [sliderRef, instanceRef] = useKeenSlider({
+  const [sliderRef] = useKeenSlider({
     loop: true,
     slides: {
       perView: 1,
@@ -22,35 +21,39 @@ export default function Depoiments() {
     },
   });
 
-  const timer = useRef();
-  useEffect(() => {
-    timer.current = setInterval(() => {
-      instanceRef.current?.next();
-    }, 3500);
-    return () => clearInterval(timer.current);
-  }, [instanceRef]);
-
   return (
     <section
       id="depoimentos"
-      className="depoiments min-h-screen flex flex-col items-center justify-center py-20 px-6"
+      className="depoiments min-h-screen flex flex-col items-center justify-center py-20 px-6 bg-amber-50"
+      data-aos="fade-up"
     >
-      <h2 className="text-2xl font-semibold mb-10 text-center">Depoimentos</h2>
+      <div className="flex flex-col mb-10 text-center" data-aos="fade-up">
+        <h2 className="text-3xl font-bold text-center mb-4">Depoimentos</h2>
+        <p className="opacity-80 leading-5">
+          Veja o que nossos clientes estão falando de nós!
+        </p>
+      </div>
 
-      <div ref={sliderRef} className="keen-slider max-w-6xl w-full mb-10">
+      <div
+        ref={sliderRef}
+        className="keen-slider max-w-6xl w-full mb-10"
+        data-aos="zoom-in"
+      >
         {depoiments.map((item, i) => (
           <div
             key={i}
-            className="keen-slider__slide flex flex-col items-center justify-center rounded-xl p-6 text-center bg-gray-200"
+            className="keen-slider__slide flex flex-col items-center justify-center rounded p-6 text-center bg-pink-400 text-white shadow-lg"
           >
-            <p className="mb-4 italic text-sm">{item.depoiment}”</p>
-            <p className="font-semibold">{item.author}</p>
+            <p className="mb-4 italic text-lg">{item.depoiment}”</p>
+            <p className="font-semibold text-xl">{item.author}</p>
             <p className="text-sm">{item.region}</p>
           </div>
         ))}
       </div>
 
-      <Button />
+      <div data-aos="fade-up" data-aos-delay="200">
+        <Button />
+      </div>
     </section>
   );
 }

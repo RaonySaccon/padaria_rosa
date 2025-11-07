@@ -13,6 +13,9 @@ import Contact from "./sections/Contact/Contact";
 import Cta from "./sections/CTA/Cta";
 import Faq from "./sections/FAQ/Faq";
 
+// extras sections
+import Gallery from "./sections/Gallery/Galery";
+
 // components
 import Header from "./layout/Header/Header";
 import Footer from "./layout/Footer/Footer";
@@ -30,15 +33,16 @@ export default function App() {
       <Hero />
       <About />
       <Offers />
+      <Gallery />
+      <Depoiments />
+      <Contact />
+      <Cta />
       <Footer />
 
       {/* Seções em que ainda não foi iniciado o desenvolvimento */}
       <NoVisible>
-        <Depoiments />
         <Faq />
         <Differentials />
-        <Contact />
-        <Cta />
       </NoVisible>
     </main>
   );
