@@ -17,8 +17,6 @@ import Faq from "./sections/FAQ/Faq";
 import Gallery from "./sections/Gallery/Galery";
 
 // components
-import Header from "./layout/Header/Header";
-import Footer from "./layout/Footer/Footer";
 import ZapButton from "./components/ZapButton/ZapButton";
 
 export default function App() {
@@ -26,7 +24,6 @@ export default function App() {
   return (
     <main>
       {/* fixeds */}
-      <Header />
       <ZapButton />
 
       {/* sections */}
@@ -37,7 +34,6 @@ export default function App() {
       <Depoiments />
       <Contact />
       <Cta />
-      <Footer />
 
       {/* Seções em que ainda não foi iniciado o desenvolvimento */}
       <NoVisible>

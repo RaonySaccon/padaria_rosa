@@ -3,8 +3,11 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import Button from "../../components/Button/Button";
 import { depoiments } from "./DepoimentsList";
+import { useRef } from "react";
 
 export default function Depoiments() {
+  const timer = useRef();
+
   const [sliderRef] = useKeenSlider({
     loop: true,
     slides: {
@@ -19,13 +22,30 @@ export default function Depoiments() {
         slides: { perView: 3, spacing: 30 },
       },
     },
+    created(slider) {
+      function autoplay() {
+        clearInterval(timer.current);
+        timer.current = setInterval(() => {
+          slider.next();
+        }, 3000);
+      }
+
+      autoplay();
+
+      slider.container.addEventListener("mouseenter", () =>
+        clearInterval(timer.current)
+      );
+      slider.container.addEventListener("mouseleave", autoplay);
+    },
+    destroyed() {
+      clearInterval(timer.current);
+    },
   });
 
   return (
     <section
       id="depoimentos"
       className="depoiments min-h-screen flex flex-col items-center justify-center py-20 px-6 bg-amber-50"
-      data-aos="fade-up"
     >
       <div className="flex flex-col mb-10 text-center" data-aos="fade-up">
         <h2 className="text-3xl font-bold text-center mb-4">Depoimentos</h2>
@@ -44,7 +64,7 @@ export default function Depoiments() {
             key={i}
             className="keen-slider__slide flex flex-col items-center justify-center rounded p-6 text-center bg-pink-400 text-white shadow-lg"
           >
-            <p className="mb-4 italic text-lg">{item.depoiment}”</p>
+            <p className="mb-4 italic text-lg">“{item.depoiment}”</p>
             <p className="font-semibold text-xl">{item.author}</p>
             <p className="text-sm">{item.region}</p>
           </div>

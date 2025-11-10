@@ -1,4 +1,4 @@
-const tel = "51999355193";
+const tel = "5551999145979";
 export const aboutData = {
   name: "Lorem Ipsum",
   tel: tel,

@@ -24,7 +24,7 @@ export default function Header() {
         <nav className="hidden sm:block">
           <ul className="flex gap-5 md:gap-8 lg:gap-12 xl:gap-16">
             {navItems.map((item) => (
-              <li>
+              <li className="opacity-80 hover:underline hover:scale-90 hover:opacity-100 transition">
                 <a href={item.link}>{item.title}</a>
               </li>
             ))}

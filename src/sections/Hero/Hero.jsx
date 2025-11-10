@@ -39,9 +39,12 @@ export default function Hero() {
           data-aos-delay="600"
         >
           <Button text="Fazer pedido" />
-          <button className="border-pink-500 border px-12 py-1.5 rounded text-pink-500 w-fit">
+          <a
+            className="border-pink-500 border px-12 py-1.5 rounded text-pink-500 w-fit hover:scale-95 transition hover:underline"
+            href="#sobre"
+          >
             Ver mais
-          </button>
+          </a>
         </div>
       </div>
 

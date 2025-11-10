@@ -31,7 +31,7 @@ export default function About() {
       className="about min-h-screen py-20 flex items-center justify-center px-8 text-center bg-amber-50"
     >
       <div
-        className="bg-white max-w-220 md:p-16 p-6 py-20 border border-gray-300 relative rounded-2xl shadow-lg"
+        className="bg-white max-w-220 md:p-16 p-6 py-20 border border-gray-600 relative"
         data-aos="zoom-in"
       >
         {/* HEADER */}

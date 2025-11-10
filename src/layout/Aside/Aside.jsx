@@ -39,7 +39,12 @@ export default function Aside({ toggleAside }) {
           <ul className="flex flex-col gap-6">
             {navItems.map((item) => (
               <li className="border-b-2 w-10/12 border-white/50">
-                <a href={item.link} target="_self" className="pr-14">
+                <a
+                  href={item.link}
+                  target="_self"
+                  className="pr-14"
+                  onClick={toggleAside}
+                >
                   {item.title}
                 </a>
               </li>

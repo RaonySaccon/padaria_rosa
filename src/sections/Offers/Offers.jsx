@@ -6,7 +6,8 @@ import { BiMenu } from "react-icons/bi";
 export default function Offers() {
   function ButtonSeeAll({ mobile }) {
     return (
-      <button
+      <a
+        href="/cardapio"
         className={`${
           mobile ? "flex lg:hidden mx-auto" : "hidden lg:flex"
         } px-6 py-1 text-pink-500 border-b-2 border-pink-500 items-center gap-2 w-fit`}
@@ -14,7 +15,7 @@ export default function Offers() {
         data-aos-delay={mobile ? "700" : "300"}
       >
         Cardápio <BiMenu />
-      </button>
+      </a>
     );
   }
 
@@ -82,7 +83,7 @@ export default function Offers() {
           data-aos="fade-up"
           data-aos-delay="700"
         >
-          <p className="font-bold text-stone-950 text-lg text-center px-4">
+          <p className="font-bold text-stone-950 text-lg text-center px-4 mb-4">
             Ou veja todas nossas delícias! &#8595;{" "}
           </p>
           <ButtonSeeAll mobile />
